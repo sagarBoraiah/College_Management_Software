@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   
+
+    <title>College Management System</title>
+
+    <link href="bootstrap.css" rel="stylesheet">
+
+    
+  
+
+    
+  </head>
+
+  <body style="">
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://getbootstrap.com/examples/navbar-static-top/#">College Management System</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">About</a></li>
+            
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="container">
+
+     
+      <div class="jumbotron">
+        <h2 style="margin-left:30%;">Course Registration Form</h2>
+        </p>
+      </div>
+      <form class="form-horizontal" style="margin-left:30%;">
+<fieldset>
+
+<!-- Text input-->
+<div class="input-group input-group-lg" style="width:50%;">
+  <span class="input-group-addon">Name</span>
+  <input type="text" class="form-control" placeholder="Enter your name">
+</div>
+<br/>
+
+
+<!-- Text input-->
+<div class="input-group input-group-lg" style="width:50%;">
+  <span class="input-group-addon">Roll No</span>
+  <input type="text" class="form-control" placeholder="Enter your Roll No">
+</div>
+<br/>
+<h4>Select Stream</h4>
+
+<!-- Select Basic -->
+<label class="radio">
+  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+  B.Tech
+</label>
+<label class="radio">
+  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+  M.Tech
+</label>
+<br/>
+<!-- Select Basic -->
+<h4>Select Course</h4>
+
+<!-- Select Basic -->
+<label class="radio">
+  <input type="radio" name="course" id="Radios1" value="option1" checked>
+  Software Engineering
+</label>
+<label class="radio">
+  <input type="radio" name="course" id="Radios2" value="option2">
+  Operating Systems
+</label>
+</fieldset>
+</form>
+
+<button type="button" class="btn btn-success" id="coursereg" style="margin-left:45%;margin-top:4%;">Register</button>
+    </div> 
+
+
+   
+    <script src="jquery.js"></script>
+    <script src="bootstrap.js"></script>
+  
+
+</body></html>

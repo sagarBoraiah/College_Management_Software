@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+   
+
+    <title>College Management System</title>
+
+    
+    <link href="bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+    #user,#pass,#sub
+    {
+      width:30%;
+      margin-top: 1%;
+    }
+    #form_main
+    {
+      margin-top:5%;
+      margin-left: 35%;
+    }
+    h1
+    {
+      margin-left: 25%;
+    }
+    #sub
+    {
+      margin-top: 2%;
+    }
+
+
+    </style>
+  </head>
+
+  <body style="">
+
+    <div class="container">
+      <div id="banner"><h1>College Management System</h1></div>
+      <hr>
+      <div id="pics">
+        <img src="mega.jpg" width="30%" height="30%"/>
+      <img src="banner.jpg" width="30%" height="30%"/>
+      <img src="ins.jpg" width="30%" height="30%"/>
+    </div>
+      <div id="form_main">
+      <form class="form-signin" action="" method="POST" role="form">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text" id="user" class="form-control" name="user" placeholder="Enter Roll No" required="" autofocus="">
+        <input type="password" id="pass" class="form-control" name="pass" placeholder="Password" required="">
+        <button class="btn btn-lg btn-primary btn-block" id="sub" name="submit" type="submit">Sign in</button>
+         
+      </form>
+      <button class="btn btn-lg btn-primary btn-block" id="sub" data-toggle="modal" data-target="#myModal" type="submit" style="margin-top:2%;">Register</button>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				
+			  </div>
+			  <div class="modal-body">
+			  <form class="form-signin" method="POST" action="" role="form">
+				<h2 class="form-signin-heading" style="margin-left:20%;">Please Register</h2>
+				<input type="text" class="form-control" placeholder="Enter Name" required="" autofocus="" style="width:40%;margin-left:20%;margin-top:2%;">
+				<input type="text"  class="form-control" name="user" placeholder="Enter Roll No" required=""style="width:40%;margin-left:20%;margin-top:2%;">
+			    <input type="password"  class="form-control" name="pass" placeholder="Enter Password" required=""style="width:40%;margin-left:20%;margin-top:2%;">
+				<button class="btn btn-lg btn-primary btn-block"  type="submit" name="sub" style="width:30%;margin-left:20%;margin-top:2%;">Register</button>
+			  </form>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" name="submit" data-dismiss="modal">Close</button>
+			   
+			  </div>
+			</div>
+		  </div>
+		  <?php
+			if(isset($_POST['sub'])){
+			if( !empty($_POST['user']) && !empty($_POST['pass'])){
+			$user=$_POST['user'];
+			$pass=$_POST['pass'];
+			$con=mysql_connect('localhost','root','') or die(mysql_error());
+			mysql_select_db('user_registration') or die("cannot select DB");
+			
+			$query=mysql_query("SELECT * FROM login WHERE username='".$user."'");
+			$numrows=mysql_num_rows($query);
+			if($numrows==0)
+			{
+				$sql="INSERT INTO login(username,password) VALUES('$user','$pass')";
+				$result=mysql_query($sql);
+				
+				if($result)
+					echo 'Account successfully Created';
+				else
+					echo 'Failed';
+			}
+			else
+				echo 'The username already exists! Please try with another username';
+			}
+			else
+				echo 'Fill in the form and Submit';
+			}
+		?>
+	  </div>
+    </div>
+    </div>
+<?php
+		
+	if(isset($_POST['submit']))
+	{
+	$user=$_POST['user'];
+	$pass=$_POST['pass'];
+	
+	$con=mysql_connect('localhost','root','') or die(mysql_error());
+	mysql_select_db('user_registration') or die("cannot select DB");
+	
+	$query=mysql_query("SELECT * FROM login WHERE username='".$user."' AND password='".$pass."'") or die('Invalid query: ' .mysql_error());
+	$numrows=mysql_num_rows($query);
+	if($numrows!=0)
+	{
+		while($row=mysql_fetch_assoc($query))
+		{
+			$dbusername=$row['username'];
+			$dbpassword=$row['password'];
+		}
+		
+		if($user==$dbusername && $pass==$dbpassword)
+		{
+			session_start();
+			$_SESSION['sess_user']=$user;
+			echo 'hg';
+			header("Location: main.php");
+		}
+	}
+	else
+		echo 'Invalid username or password';
+	}
+?>
+
+
+    <script type="text/javascript" src="jquery.js"></script>
+<script src="bootstrap.js"></script>
+</body></html>

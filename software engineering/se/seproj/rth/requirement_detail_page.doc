@@ -1,0 +1,337 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>RTH - Requirements and Testing Hub</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.2  (Linux)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGEDBY" CONTENT="student ">
+	<META NAME="CHANGED" CONTENT="20140331;16252000">
+	<SCRIPT SRC="api/javascript_api.js"></SCRIPT>
+	<SCRIPT SRC="sortable.js"></SCRIPT>
+</HEAD>
+<BODY LANG="en-IN" DIR="LTR">
+<H2>DEMO - REQUIREMENT DETAIL</H2>
+<TABLE CELLPADDING=2 CELLSPACING=2>
+	<TR>
+		<TD>
+			<FORM NAME="navigate_to_id" ACTION="navigate_to_id_action.php" METHOD="POST">
+				<P><A NAME="validate_txt_field"></A>Goto TestID <INPUT TYPE=TEXT NAME="id_txt_field" SIZE=6 STYLE="width: 1.38cm; height: 0.61cm">
+				<INPUT TYPE=SUBMIT VALUE="Go" STYLE="width: 1.19cm; height: 0.93cm"></P>
+			</FORM>
+		</TD>
+	</TR>
+</TABLE>
+<FORM NAME="form_set_project" ACTION="login_switch_proj.php" METHOD="POST">
+	<INPUT TYPE=HIDDEN NAME="javascript_disabled" VALUE="true">
+	<INPUT TYPE=HIDDEN NAME="login[page]">
+	<INPUT TYPE=HIDDEN NAME="login[get]">
+	<INPUT TYPE=HIDDEN NAME="uname" VALUE="admin">
+	<INPUT TYPE=HIDDEN NAME="non_javascript_browser" VALUE="true">
+	<TABLE CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TD WIDTH=33%>
+				<P>logged in as admin</P>
+			</TD>
+			<TD WIDTH=33%>
+				<P>2014-03-31 12:11:11 (CEST)</P>
+			</TD>
+			<TD WIDTH=33%>
+				<P>Switch Project 
+				<SELECT NAME="login[switch_project]" STYLE="width: 2.2cm; height: 0.82cm" ONCHANGE="document.forms.form_set_project.submit();">
+					<OPTION VALUE="DEMO" SELECTED>DEMO</OPTION>
+				</SELECT> 
+				</P>
+			</TD>
+		</TR>
+	</TABLE>
+</FORM>
+<TABLE CELLPADDING=2 CELLSPACING=0>
+	<TR>
+		<TD>
+			<P><A HREF="http://rth.liedl.at//home_page.php">Home</A> |
+			<A HREF="http://rth.liedl.at//requirement_page.php">Requirements</A>
+			| <A HREF="http://rth.liedl.at//test_page.php">Test Library</A> |
+			<A HREF="http://rth.liedl.at//release_page.php">Release</A> | <A HREF="http://rth.liedl.at//results_page.php">Test
+			Results</A> | <A HREF="http://rth.liedl.at//bug_page.php">Defects</A>
+			| <A HREF="http://rth.liedl.at//report_page.php">Reporting</A> |
+			<A HREF="http://rth.liedl.at//admin_page.php">Manage</A> | <A HREF="http://rth.liedl.at//user_manage_page.php">User</A>
+			| <A HREF="http://rth.liedl.at//help_index.php" TARGET="_blank">Help</A>
+			| <A HREF="http://rth.liedl.at//logout.php">Logout</A> 
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<CENTER>
+	<TABLE CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TD>
+				<P>&nbsp;&nbsp;<A HREF="requirement_page.php">Requirements</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A HREF="requirement_associations_page.php">Folder
+				View</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A HREF="requirement_add_page.php%3Ftype=R">Add
+				Requirement - Record</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A HREF="requirement_add_page.php%3Ftype=F">Add
+				Requirement - File</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A HREF="requirement_notification_page.php">Notifications</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A HREF="requirement_traceability_matrix_page.php">Traceability
+				Matrix</A>&nbsp;&nbsp;</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P><BR><BR>
+</P>
+<TABLE CELLPADDING=2 CELLSPACING=2>
+	<TR>
+		<TD WIDTH=33%>
+			<P>ReqID</P>
+		</TD>
+		<TD WIDTH=33%>
+			<P>Requirement Name</P>
+		</TD>
+		<TD WIDTH=33%>
+			<P>Version</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=33%>
+			<P>00009</P>
+		</TD>
+		<TD WIDTH=33%>
+			<P>storage</P>
+		</TD>
+		<TD WIDTH=33%>
+			<P>1.0</P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE CELLPADDING=2 CELLSPACING=2>
+	<TR>
+		<TD WIDTH=25%>
+			<P>Status</P>
+		</TD>
+		<TD WIDTH=25%>
+			<P>New</P>
+		</TD>
+		<TD WIDTH=25%>
+			<P>Priority</P>
+		</TD>
+		<TD WIDTH=25%>
+			<P>High</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P>Author</P>
+		</TD>
+		<TD>
+			<P>admin</P>
+		</TD>
+		<TD WIDTH=25%>
+			<P>Area Covered</P>
+		</TD>
+		<TD WIDTH=25%>
+			<P>Requirements</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P>Assigned To</P>
+		</TD>
+		<TD>
+			<P>admin</P>
+		</TD>
+		<TD>
+			<P>Doc Type</P>
+		</TD>
+		<TD>
+			<P>Func Spec</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD VALIGN=TOP>
+			<P>Assigned to Release</P>
+		</TD>
+		<TD VALIGN=TOP></TD>
+		<TD VALIGN=TOP>
+			<P>Functionality</P>
+		</TD>
+		<TD>
+			<P>User Mgmt</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD VALIGN=TOP>
+			<P>Date Created</P>
+		</TD>
+		<TD VALIGN=TOP>
+			<P>2014-03-31 11:59:26</P>
+		</TD>
+		<TD>
+			<P>Locked By</P>
+		</TD>
+		<TD>
+			<P>admin</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P>Last Updated</P>
+		</TD>
+		<TD></TD>
+		<TD>
+			<P>Locked Date</P>
+		</TD>
+		<TD>
+			<P>2014-03-31 12:01:24</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P>Create Test</P>
+		</TD>
+		<TD>
+			<P><A HREF="test_add_page.php%3Fassoc_req=9">Test</A></P>
+		</TD>
+		<TD>
+			<P>Show History</P>
+		</TD>
+		<TD>
+			<P><A HREF="requirement_version_history_page.php%3Freq_id=9&amp;req_version_id=9">History</A></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P>Create Child Requirement</P>
+		</TD>
+		<TD>
+			<P><A HREF="requirement_add_page.php%3Ftype=F&amp;parent_req=9">File</A>
+			| <A HREF="requirement_add_page.php%3Ftype=R&amp;parent_req=9">Record</A></P>
+		</TD>
+		<TD>
+			<P>Change Request</P>
+		</TD>
+		<TD></TD>
+	</TR>
+	<TR>
+		<TD>
+			<P>Detail</P>
+		</TD>
+		<TD COLSPAN=3>
+			<P>Text entered by the user shall be stored in an ArrayList data
+			structure which come as a part of java.util.ArrayList package .
+			The characters entered shall be added to the list via the add()
+			method.&nbsp; 
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<FORM ACTION="requirement_detail_page.php" METHOD="POST">
+	<TABLE CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TD WIDTH=20%>
+				<DIV ALIGN=CENTER>
+					<P><INPUT TYPE=SUBMIT NAME="submit_req_add_ver" VALUE="Add New Version" STYLE="width: 4.02cm; height: 0.93cm"></P>
+				</DIV>
+			</TD>
+			<TD WIDTH=20%>
+				<DIV ALIGN=CENTER>
+					<P><INPUT TYPE=SUBMIT NAME="submit_req_update" VALUE="Update Requirement" STYLE="width: 4.76cm; height: 0.93cm"></P>
+				</DIV>
+			</TD>
+			<TD WIDTH=20%>
+				<DIV ALIGN=CENTER>
+					<P><INPUT TYPE=SUBMIT NAME="submit_req_delete" VALUE="Delete Requirement" STYLE="width: 4.63cm; height: 0.93cm"><INPUT TYPE=HIDDEN NAME="r_page" VALUE="requirement_page.php"><INPUT TYPE=HIDDEN NAME="f" VALUE="delete_requirement"><INPUT TYPE=HIDDEN NAME="id" VALUE="9"><INPUT TYPE=HIDDEN NAME="project_id" VALUE="1"><INPUT TYPE=HIDDEN NAME="msg" VALUE="190"><INPUT TYPE=HIDDEN NAME="req_version_id" VALUE="9">
+										</P>
+				</DIV>
+			</TD>
+			<TD WIDTH=20%>
+				<DIV ALIGN=CENTER>
+					<P><INPUT TYPE=SUBMIT NAME="submit_req_lock" DISABLED VALUE="Lock Requirement" STYLE="width: 4.24cm; height: 0.93cm"></P>
+				</DIV>
+			</TD>
+			<TD WIDTH=20%>
+				<DIV ALIGN=CENTER>
+					<P><INPUT TYPE=SUBMIT NAME="submit_req_unlock" VALUE="Unlock Requirement" STYLE="width: 4.71cm; height: 0.93cm"></P>
+				</DIV>
+			</TD>
+		</TR>
+	</TABLE>
+</FORM>
+<P><BR><BR>
+</P>
+<TABLE CELLPADDING=2 CELLSPACING=2>
+	<TR>
+		<TD>
+			<P><BR><BR>
+			</P>
+			<TABLE CELLPADDING=2 CELLSPACING=2>
+				<TR>
+					<TD WIDTH=25%>
+						<P>Requirements Assoc</P>
+					</TD>
+					<TD WIDTH=25%>
+						<P><A HREF="requirement_detail_page.php%3Ftab=2">Test Assoc</A></P>
+					</TD>
+					<TD WIDTH=25%>
+						<P><A HREF="requirement_detail_page.php%3Ftab=4">Release Assoc</A></P>
+					</TD>
+					<TD WIDTH=25%>
+						<P><A HREF="requirement_detail_page.php%3Ftab=3">Discussions</A></P>
+					</TD>
+				</TR>
+			</TABLE>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P ALIGN=CENTER STYLE="margin-bottom: 0cm">[ <A HREF="requirement_assoc_page.php%3Freq_id=9&amp;req_version_id=9">Edit
+			Children</A> ] 
+			</P>
+			<TABLE WIDTH=100% CELLPADDING=4 CELLSPACING=2>
+				<TR>
+					<TD>
+						<P ALIGN=CENTER>There are no Requirements related to this
+						Requirement.</P>
+					</TD>
+				</TR>
+			</TABLE>
+			<P><BR><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD></TD>
+	</TR>
+</TABLE>
+<P><BR><BR><BR>
+</P>
+<HR>
+<TABLE CELLPADDING=2 CELLSPACING=2>
+	<TR>
+		<TD>
+			<P>RTH - Requirements and Testing Hub</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P>Version 1.7.2</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P>Please contact the system administrator with any problems
+			<A HREF="mailto:andreas_rth@24speed.at">RTH_Admin</A></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P>For general help or support please visit our project page:
+			<A HREF="http://sourceforge.net/projects/rth/" TARGET="_blank">sourceforge.net</A></P>
+		</TD>
+	</TR>
+</TABLE>
+<P>Time: 0.078001 seconds. 
+</P>
+</BODY>
+</HTML>
